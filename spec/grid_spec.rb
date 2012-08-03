@@ -349,8 +349,11 @@ describe Gol::Grid do
     grid.count_living_neighbours(cell).should be 3
   end
 
-  it "should apply rule one (3 living neighbours == will be alive)" do
+  it "should be able to check whether a cell will survive" do
     (grid.respond_to? :check_survival).should be true
+  end
+
+  it "should apply rule one (3 living neighbours == will be alive)" do
     cell = grid.get_cell(2, 2)
     grid.get_cell(1, 1).alive = true
     grid.get_cell(2, 1).alive = true
@@ -391,8 +394,6 @@ describe Gol::Grid do
   end
 
 
-  # it "should be able to check whether a cell will survive" do
-    # (grid.respond_to? :check_survival).should be true
-  # end
+
 
 end
