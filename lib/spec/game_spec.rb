@@ -1,7 +1,7 @@
 require_relative '../game'
 
 describe Gol::Game do
-  let(:game) { Gol::Game.new(5) }
+  let(:game) { Gol::Game.new(5, 1) }
   it "has a grid" do
     (game.respond_to? :grid).should be true
   end
