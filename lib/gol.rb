@@ -60,8 +60,15 @@ module Gol
 
     def main_script
       parse_options
-      puts @options
-      # g = Game.new(@options)
+      g = Game.new(@options[:size], @options[:pause])
+      if @options[:object].eql? :glider
+        g.glider
+      else
+        g.turn_alive_random_cells
+      end
+      @options[:generations].times do
+        g.step
+      end
     end
 
   end

@@ -2,9 +2,10 @@ require_relative 'grid'
 
 module Gol
   class Game
-    attr_accessor :grid
+    attr_accessor :grid, :pause
 
-    def initialize(size)
+    def initialize(size, pause)
+      @pause = pause
       @grid = Grid.new(size)
     end
 
@@ -44,7 +45,7 @@ module Gol
         end
       end
       print_game
-      sleep 0.2
+      sleep @pause
     end
 
 
