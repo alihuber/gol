@@ -16,7 +16,7 @@ Usage
 In summary, to get a random filled grid with size 25x25 which goes for 100 generations and pauses for 1 sec you would do  
 `gol -s 25 -g 100 -p 1`  
 
-et voilà:  
+et voilà: (looks better in a terminal)
 
 
 |O|O|\_|\_|\_|\_|\_|\_|\_|\_|\_|O|\_|\_|\_|O|\_|\_|\_|\_|\_|\_|O|\_|\_|  
